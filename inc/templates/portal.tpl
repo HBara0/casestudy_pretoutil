@@ -43,9 +43,8 @@
 </div>-->
 
 <div style="width: 63%; float:left;">
-    <h1>{$lang->welcometomagister}</h1>
+    <h1>Welcome</h1>
     {$lang->mainmessage}
-
     <p>
         <strong>{$lang->featuredmodules}:</strong><br />
     <div>

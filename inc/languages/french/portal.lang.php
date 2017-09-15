@@ -17,7 +17,7 @@ $lang['intotal'] = 'au total';
 $lang['lastfinalized'] = 'Derniers rapports finalisés';
 $lang['listqreports'] = 'Liste des rapports trimestriels';
 Vous êtes en mesure de préparer vos rapports mensuels et trimestriels, faire une demande de congé et plus.';
-$lang['systemnews'] = 'Magister nouvelles';
+$lang['systemnews'] = 'nouvelles';
 $lang['timecity'] = ' {
     1
 } {

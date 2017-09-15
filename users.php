@@ -33,12 +33,9 @@ if ($core->input['action']) {
 
                 create_cookie('uid', $user_data['uid'], (TIME_NOW + (60 * $core->settings['idletime'])));
                 create_cookie('loginKey', $user_data['loginKey'], (TIME_NOW + (60 * $core->settings['idletime'])));
-                $db->update_query('users', array('failedLoginAttempts' => 0), "uid='{$user_details[uid]}'");
-
                 output_xml("<status>true</status><message>{$lang->loginsuccess}</message>");
             }
             else {
-                $db->update_query('users', array('failedLoginAttempts' => $validation->get_real_failed_attempts() + 1, 'lastAttemptTime' => TIME_NOW), "uid='{$user_details[uid]}'");
 //                if ($validation->get_real_failed_attempts() >= 3) {
 //                    $lang->tryresetpassword = '<![CDATA[<br />' . $lang->tryresetpassword . ']]>';
 //                }
