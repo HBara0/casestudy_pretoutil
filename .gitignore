@@ -1,47 +1,18 @@
-# Windows image file caches
+/nbproject/private/
+inc/config.php
+inc/settings.php
+inc/init.php
 Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+/tmp/
+inc/init.php
+inc/integration_config.php
+.htaccess
+/uploads/*
+/images/charts/*.png
+/images/entitieslogos/*.png
+/images/entitieslogos/*.jpg
+/images/entitieslogos/*.gif
+/images/entitieslogos/*.bmp
+/images/profilepictures/*.jpg
+/images/profilepictures/*.bmp
+crons/directq_hb.php
