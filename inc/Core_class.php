@@ -7,7 +7,6 @@ class Core {
     public $cookies = array();
     public $user = array();
     public $user_obj = null;
-    public $usergroup = array();
     protected $magicquotes = 0;
     protected $request_method = '';
     protected $clean_variables = array(

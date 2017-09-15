@@ -27,28 +27,8 @@ eval("\$headerinc = \"" . $template->get('headerinc') . "\";");
 if ($session->uid > 0) {
     /* Check if passwors has expired */
 
-    if ($core->usergroup['canAccessSystem'] == 0) {
-        error($lang->accountsuspended);
-    }
-
-    if ($core->settings['onmaintenance'] == 1) {
-        if ($core->user['gid'] != 1) {
-            error($core->settings['maintenancemessage']);
-        }
-        else {
-            $maintenancenotice = '<p class="notice">System is set on maintenance.</p>';
-        }
-    }
-
-
-
-    $modules_list = parse_moduleslist($run_module);
     eval("\$header = \"" . $template->get('navbar') . "\";");
     eval("\$footer = \"" . $template->get('footer2') . "\";");
-
-//    if($core->user['lastVisit'] == 0) {
-//        eval("\$footer .= \"".$template->get('global_quickintrovideo')."\";");
-//    }
 }
 else {
     if (strpos(strtolower($_SERVER['PHP_SELF']), 'users.php') === false) {

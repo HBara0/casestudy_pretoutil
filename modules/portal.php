@@ -2,7 +2,7 @@
 
 $module['name'] = 'portal';
 $module['title'] = 'Home';
-$module['homepage'] = 'calendar';
+$module['homepage'] = 'portal';
 $module['globalpermission'] = 'canAccessSystem';
 $module['menu'] = '';
 ?>

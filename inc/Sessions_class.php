@@ -9,7 +9,8 @@ class Sessions {
         $this->cleanup();
         if (!isset($core->cookies['sid'])) {
             $this->create();
-        } else {
+        }
+        else {
             $this->update();
         }
 
@@ -18,7 +19,6 @@ class Sessions {
             if ($core->user_obj) {
                 $core->user = $core->user_obj->get();
                 unset($core->user['password'], $core->user['salt']);
-                $core->user_obj->read_usergroupsperm(false, true);
             }
         }
     }
@@ -51,7 +51,6 @@ class Sessions {
         $this->uid = $db->escape_string($core->cookies['uid']);
         $this->ipaddress = userip();
 
-        $this->authenticate_cookie();
 
         $session_data = array(
             'uid' => $this->uid,
@@ -72,7 +71,6 @@ class Sessions {
               } */
 
             if ((TIME_NOW - $session_information['time']) > (60 * 2)) {
-                $db->update_query('users', array('lastVisit' => TIME_NOW), "uid='" . $this->uid . "'");
                 $db->update_query('sessions', array('time' => TIME_NOW), "sid='" . $this->sid . "'");
                 $this->create_cookie('sid', $this->sid, (TIME_NOW + (60 * $core->settings['idletime']))); //60*SESSION_EXPIRE
                 $this->create_cookie('uid', $this->uid, (TIME_NOW + (60 * $core->settings['idletime'])));
@@ -83,22 +81,6 @@ class Sessions {
             $query = $db->update_query('sessions', $session_data, "sid='" . $this->sid . "'");
             if ($db->affected_rows() == 0) {
                 $this->create_dbsession();
-            }
-        }
-    }
-
-    private function authenticate_cookie() {
-        global $core, $db;
-        if (empty($core->cookies['loginKey'])) {
-            unset($core->user);
-            $this->uid = 0;
-            //$this->create();
-            return false;
-        } else {
-            if (empty($this->uid) || $core->cookies['loginKey'] != $db->fetch_field($db->query("SELECT loginKey FROM " . Tprefix . "users WHERE uid={$this->uid}"), 'loginKey')) {
-                unset($core->user);
-                $this->uid = 0;
-                return false;
             }
         }
     }
@@ -192,7 +174,8 @@ class Sessions {
 
         if ($expire == -1 || $expire === NULL) {
             $expire = 0;
-        } else {
+        }
+        else {
             $expire += TIME_NOW;
         }
 

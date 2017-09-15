@@ -3,9 +3,7 @@
 if (!defined('DIRECT_ACCESS')) {
     die('Direct initialization of this file is not allowed.');
 }
-if ($core->usergroup['canAccessSystem'] == 0) {
-    error($lang->sectionnopermission);
-}
+
 if (!isset($core->input['action'])) {
 
     eval("\$calendar= \"" . $template->get('main_calendar') . "\";");

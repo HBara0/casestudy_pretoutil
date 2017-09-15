@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{$core->settings[rootdir]}">
-                <img src="{$core->settings[rootdir]}/images/magister.png" alt="Magister" border="0" class="systemlogo">
+                <img src="{$core->settings[rootdir]}/images/magister.png" alt="Pret d'outil" border="0" class="systemlogo">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">

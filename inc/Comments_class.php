@@ -4,7 +4,6 @@ class Comments extends AbstractClass {
 
     protected $data = array();
     protected $errorcode = 0;
-    protected $usergroup = array();
 
     const PRIMARY_KEY = 'comid';
     const TABLE_NAME = 'comments';

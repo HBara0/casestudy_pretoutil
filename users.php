@@ -61,7 +61,6 @@ if ($core->input['action']) {
     elseif ($core->input['action'] == 'do_logout') {
         $uid = $core->user['uid'];
 
-        $db->update_query('users', array('lastVisit' => TIME_NOW), "uid='$uid'");
 
         $db->delete_query('sessions', "uid='$uid'");
 

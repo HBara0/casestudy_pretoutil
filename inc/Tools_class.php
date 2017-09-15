@@ -4,7 +4,6 @@ class Tools extends AbstractClass {
 
     protected $data = array();
     protected $errorcode = 0;
-    protected $usergroup = array();
 
     const PRIMARY_KEY = 'tid';
     const TABLE_NAME = 'tools';
